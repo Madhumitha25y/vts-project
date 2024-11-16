@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Course</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #4CAF50;
+            /* Green color for headings */
+        }
+
+        /* Banner Section */
+        .banner {
+            background-color: #fff;
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .banner-content {
+            text-align: center;
+            color: #333;
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .banner p {
+            font-size: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .banner-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .banner-button:hover {
+            transform: translateY(-5px);
+            /* Button lift effect */
+            background-color: #388E3C;
+        }
+
+        /* Carousel Styling */
+        .carousel-item img {
+            max-height: 500px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Syllabus Section */
+        .syllabus {
+            padding: 60px 20px;
+            background-color: #e8f5e9;
+        }
+
+        .syllabus .row {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .syllabus-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .syllabus-content:hover {
+            transform: scale(1.05);
+            /* Enlarge on hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            /* Add shadow */
+        }
+
+        .syllabus-content img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .syllabus h3 {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        .syllabus p {
+            color: #666;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* nav section */
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .section {
+            padding: 60px 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        h1,
+        h2 {
+            color: #4CAF50;
+        }
+
+        .btn-green {
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-green:hover {
+            background-color: #388E3C;
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 48px;
+            color: #4CAF50;
+            transition: transform 0.3s;
+        }
+
+        .icon:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Skill section */
+        .skill-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-10px);
+            /* Lift the box on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Add a shadow */
+        }
+
+        .skill-img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s;
+        }
+
+        .skill-box:hover .skill-img {
+            transform: rotate(10deg) scale(1.1);
+            /* Rotate and enlarge image on hover */
+        }
+
+        h3 {
+            color: #4CAF50;
+            /* Green heading */
+            margin-top: 15px;
+        }
+
+        p {
+            color: #555;
+            /* Slightly lighter text */
+        }
+
+        /* certification section */
+        .section {
+            padding: 60px 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            /* Slight zoom-in on hover */
+        }
+
+        h2,
+        h3 {
+            color: #4CAF50;
+            /* Green headings */
+        }
+
+        p {
+            color: #555;
+            /* Slightly lighter text */
+        }
+
+        .cert-img {
+            width: 100%;
+            max-width: 400px;
+            /* Limit image size */
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .cert-img:hover {
+            transform: scale(1.1) rotate(3deg);
+            /* Enlarge and rotate image on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Add shadow to image */
+        }
+
+        .cert-content {
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cert-content:hover {
+            transform: translateX(10px);
+            /* Slide content slightly to the right on hover */
+        }
+
+        .btn-green {
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-green:hover {
+            background-color: #388E3C;
+            transform: translateY(-5px);
+            /* Lift button on hover */
+        }
+
+        /* Key features */
+        .section {
+            padding: 60px 20px;
+        }
+
+        h2,
+        h3 {
+            color: #4CAF50;
+            /* Green headings */
+        }
+
+        p {
+            color: #555;
+            /* Light text */
+        }
+
+        .feature-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            /* Lift on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Add shadow */
+        }
+
+        .feature-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover .feature-img {
+            transform: scale(1.1) rotate(5deg);
+            /* Enlarge and rotate on hover */
+        }
+
+        h3 {
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Full Stack Developer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#course-content">Course Content</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills You'll Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modules">Technical Modules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Key Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certification">Certification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-learn">Why Learn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner Section -->
+    <!-- <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Become a Full Stack Developer</h1>
+                <p>Master front-end and back-end development with our comprehensive course</p>
+                <a href="#syllabus" class="banner-button">Explore the Syllabus</a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Carousel Section -->
+    <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="frondend1.webp" class="d-block w-100" alt="Web Development">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Master Frontend & Backend</h5>
+                    <p>Build dynamic websites using the latest technologies.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="fullstack-banner.jfif" class="d-block w-100" alt="Backend Development">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Deploy Cloud Applications</h5>
+                    <p>Learn to deploy scalable applications on AWS and other cloud platforms.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="fullhd.png" class="d-block w-100" alt="Full Stack Course">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Get Certified</h5>
+                    <p>Earn industry-recognized certification and boost your career.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Syllabus Section -->
+    <section id="syllabus" class="syllabus">
+        <div class="container">
+            <h2>Full Stack Developer Course Syllabus</h2>
+            <div class="row">
+                <!-- Frontend Module -->
+                <div class="col-md-4">
+                    <div class="syllabus-content">
+                        <img src="frontend-1.webp" style="width:300px; height:300px;" alt="Frontend Development">
+                        <h3>Frontend Development</h3>
+                        <p>Learn HTML, CSS, JavaScript, and modern frameworks like React and Angular.</p>
+                    </div>
+                </div>
+                <!-- Backend Module -->
+                <div class="col-md-4">
+                    <div class="syllabus-content">
+                        <img src="backend.jpeg" style="width:300px; height:300px;" alt="Backend Development">
+                        <h3>Backend Development</h3>
+                        <p>Master server-side programming with Node.js, Express, and databases like MongoDB.</p>
+                    </div>
+                </div>
+                <!-- DevOps Module -->
+                <div class="col-md-4">
+                    <div class="syllabus-content">
+                        <img src="devops.webp" style="width:300px; height:300px;" alt="DevOps">
+                        <h3>Cloud & DevOps</h3>
+                        <p>Learn to deploy and manage applications on AWS, Docker, and Kubernetes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Course Content Section
+    <section id="course-content" class="section text-center">
+        <div class="container">
+            <h1>Course Content</h1>
+            <p>Learn Full Stack Development from basics to advanced with hands-on projects.</p>
+            <button class="btn btn-green">Explore More</button>
+        </div>
+    </section> -->
+
+    <!-- Skills Section -->
+    <!-- <section id="skills" class="section text-center bg-light">
+        <div class="container">
+            <h2>Skills You'll Learn</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">HTML, CSS, JavaScript</li>
+                <li class="list-group-item">Node.js, Express.js</li>
+                <li class="list-group-item">React.js, Angular</li>
+                <li class="list-group-item">MongoDB, MySQL</li>
+                <li class="list-group-item">Version Control (Git & GitHub)</li>
+            </ul>
+        </div>
+    </section> -->
+    <!-- Skills You'll Learn Section -->
+    <section id="skills" class="section text-center bg-light">
+        <div class="container">
+            <h2>Skills You'll Learn</h2>
+            <div class="row">
+                <!-- Skill 1: HTML, CSS, JavaScript -->
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <img src="htmlcss.jfif" style="width:300px; height:300px;" alt="HTML, CSS, JavaScript" class="img-fluid skill-img">
+                        <h3>HTML, CSS, JavaScript</h3>
+                        <p>Build responsive, visually appealing websites using the foundational web technologies.</p>
+                    </div>
+                </div>
+
+                <!-- Skill 2: Node.js & Express.js -->
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <img src="node.png" style="width:300px; height:300px;" alt="Node.js, Express.js" class="img-fluid skill-img">
+                        <h3>Node.js & Express.js</h3>
+                        <p>Develop backend services and APIs with JavaScript using the power of Node.js and Express.</p>
+                    </div>
+                </div>
+
+                <!-- Skill 3: React.js & Angular -->
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <img src="react.jfif" style="width:300px; height:300px;" alt="React.js, Angular" class="img-fluid skill-img">
+                        <h3>React.js & Angular</h3>
+                        <p>Create dynamic, single-page applications with modern frontend frameworks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <!-- Skill 4: Databases -->
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <img src="dbms.jfif" style="width:300px; height:300px;" alt="MongoDB, MySQL" class="img-fluid skill-img">
+                        <h3>MongoDB & MySQL</h3>
+                        <p>Manage and interact with databases using both SQL and NoSQL technologies.</p>
+                    </div>
+                </div>
+
+                <!-- Skill 5: Version Control -->
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <img src="git.jfif" style="width:300px; height:300px;" alt="Git, GitHub" class="img-fluid skill-img">
+                        <h3>Version Control with Git & GitHub</h3>
+                        <p>Track, manage, and collaborate on projects using Git for version control.</p>
+                    </div>
+                </div>
+
+                <!-- Skill 6: Deployment -->
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <img src="deployment.jfif" style="width:300px; height:300px;" alt="Deployment" class="img-fluid skill-img">
+                        <h3>Cloud Deployment</h3>
+                        <p>Deploy and host applications on cloud platforms like AWS and Heroku.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Modules Section -->
+    <section id="modules" class="section text-center">
+        <div class="container">
+            <h2>Technical Modules</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="icon">&#128187;</span>
+                    <h3>Frontend Development</h3>
+                    <p>Master HTML, CSS, JavaScript, and frameworks like React and Angular.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="icon">&#128241;</span>
+                    <h3>Backend Development</h3>
+                    <p>Learn Node.js, Express, databases, and API creation.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="icon">&#128297;</span>
+                    <h3>Deployment</h3>
+                    <p>Deploy applications with cloud platforms like AWS and Heroku.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <!-- <section id="features" class="section text-center bg-light">
+        <div class="container">
+            <h2>Key Features</h2>
+            <p>Live projects, expert mentoring, job-ready skills, certification, and more.</p>
+        </div>
+    </section> -->
+    <!-- Key Features Section -->
+    <section id="key-features" class="section text-center bg-light">
+        <div class="container">
+            <h2>Key Features of the Full Stack Developer Course</h2>
+            <div class="row">
+                <!-- Feature 1: Hands-On Projects -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="hands.jfif" style="width:300px;height:300px;" alt="Hands-On Projects" class="img-fluid feature-img">
+                        <h3>Hands-On Projects</h3>
+                        <p>Work on real-world projects to gain practical experience and apply your skills in actual
+                            development scenarios.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Industry-Recognized Certification -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="Industry.jfif" style="width:300px;height:300px;" alt="Certification" class="img-fluid feature-img">
+                        <h3>Industry-Recognized Certification</h3>
+                        <p>Receive a globally recognized certification that validates your expertise as a Full Stack
+                            Developer.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: 1-on-1 Mentorship -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="mentorship.jfif" style="width:300px;height:300px;" alt="1-on-1 Mentorship" class="img-fluid feature-img">
+                        <h3>1-on-1 Mentorship</h3>
+                        <p>Get personalized guidance from industry experts to accelerate your learning and career
+                            growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <!-- Feature 4: Job Placement Assistance -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="job.jfif" style="width:300px;height:300px;"  alt="Job Placement Assistance" class="img-fluid feature-img">
+                        <h3>Job Placement Assistance</h3>
+                        <p>Receive support with job placement, resume building, and interview preparation to land your
+                            dream job.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Flexible Learning -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="flexible.jfif" style="width:300px;height:300px;"  alt="Flexible Learning" class="img-fluid feature-img">
+                        <h3>Flexible Learning Options</h3>
+                        <p>Learn at your own pace with flexible schedules that accommodate working professionals and
+                            students.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6: Lifetime Access -->
+                <!-- <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="lifetime-access.jpg" alt="Lifetime Access" class="img-fluid feature-img">
+                        <h3>Lifetime Access to Course Materials</h3>
+                        <p>Enjoy lifetime access to all course materials, resources, and updates for continuous
+                            learning.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certification Section -->
+    <!-- <section id="certification" class="section text-center">
+        <div class="container">
+            <h2>Certification</h2>
+            <p>Upon course completion, receive a recognized Full Stack Developer Certification.</p>
+            <button class="btn btn-green">Get Certified</button>
+        </div>
+    </section> -->
+    <!-- Certification Section -->
+    <section id="certification" class="section text-center">
+        <div class="container">
+            <h2>Certification</h2>
+            <div class="row align-items-center">
+                <!-- Certification Image -->
+                <div class="col-md-6">
+                    <div class="cert-image">
+                        <img src="certificate.jfif" alt="Certification" class="img-fluid cert-img">
+                    </div>
+                </div>
+
+                <!-- Certification Content -->
+                <div class="col-md-6">
+                    <div class="cert-content">
+                        <h3>Full Stack Developer Certification</h3>
+                        <p>Upon successful completion of the Full Stack Developer course, you will receive an
+                            industry-recognized certification that demonstrates your expertise in web development,
+                            backend technologies, databases, and cloud deployment.</p>
+                        <p>This certification will boost your career prospects and help you stand out in the competitive
+                            tech industry.</p>
+                        <button class="btn btn-green">Get Your Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn Section -->
+    <!-- <section id="why-learn" class="section text-center bg-light">
+        <div class="container">
+            <h2>Why Learn Full Stack Development?</h2>
+            <p>It's a highly in-demand skill with abundant career opportunities in web development, software
+                engineering, and beyond.</p>
+        </div>
+    </section> -->
+    <section id="why-learn" class="container py-5">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="display-4">Why Learn Full Stack Development?</h2>
+                <p class="lead">Full Stack Development equips you with the skills to build both front-end and back-end of web applications, making you a versatile developer.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="versatile.jfif" style="height:250px;"class="card-img-top" alt="Versatility">
+                    <div class="card-body">
+                        <h5 class="card-title">Versatile Skill Set</h5>
+                        <p class="card-text">Learn both client-side and server-side technologies, giving you the ability to work on all layers of a web application.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="demand.jfif" class="card-img-top" alt="High Demand">
+                    <div class="card-body">
+                        <h5 class="card-title">High Market Demand</h5>
+                        <p class="card-text">Full stack developers are in high demand due to their ability to handle all aspects of web development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="growth.jfif" class="card-img-top" alt="Career Growth">
+                    <div class="card-body">
+                        <h5 class="card-title">Career Growth</h5>
+                        <p class="card-text">Full stack development opens doors to diverse roles, from junior developer to senior software engineer, with ample opportunities for career advancement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="lead">Become a proficient Full Stack Developer and unlock the potential for innovation, problem-solving, and exciting career paths!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
